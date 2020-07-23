@@ -169,7 +169,7 @@ padding: 7% 15%;
 }
 
 /* Media querry */
-@media (max-width: 1028px) {
+@media (max-width: 1000px) {
     .title-image {
         position: static;
         transform: rotate(0);
@@ -178,4 +178,98 @@ padding: 7% 15%;
     #title {
         text-align: center;
     }
+
+    #title .navbar-brand {
+        font-size: 80px;
+
+    }
+
+    #title .navbar-toggler-icon {
+        font-size: 60px;
+        
+    }
+
+   #title .nav-link {
+        font-size: 40px;
+        
+    }
+
+    #title h1 {
+        font-size: 6rem;
+    }
+
+    #title .btn {
+        font-size: 2.5rem;
+        border-radius: 10px;
+    }
+
+    /* sample section */
+
+    #samples h1 {
+        font-size: 5rem;
+        font-weight: bold;
+    }
+
+    #samples h3 {
+        font-size: 3rem;
+    }
+
+    #samples p {
+        font-size: 2.5rem;
+        
+    }
+
+    #samples a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        
+    }
+
+    #features h3 {
+        font-size: 1.8rem;
+    }
+
+    #features p {
+        font-size: 1.5rem;
+    }
+
+    /* testimonials */
+
+    #testimonials h2 {
+        font-size: 2.5rem;
+        color: red;
+    }
+
+    
+    #testimonials em {
+        font-size: 1.5rem;
+        color: red;
+}
+
+/* PRICING */
+ #pricing h2 {
+     font-size: 3rem;
+ }
+
+ #pricing h3 {
+    font-size: 2rem;
+}
+
+#pricing p {
+    font-size: 1.5rem;
+}
+
+#cta h3 {
+    font-size: 3 rem;
+}
+
+#cta .btn {
+    font-size: 2.5rem;
+    border-radius: 10px;
+}
+
+/* footer */
+#footer .container-fluid {
+    font-size: 1.5rem;
+}
 }
