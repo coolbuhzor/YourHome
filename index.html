@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>YourHome.netlify.app</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/7d4482d100.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Ubuntu&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <section id="title">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark  ">
+        <a class="navbar-brand" href="">YourHome</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Togglenavigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#footer" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item ">
+              <a href="#samples" class="nav-link">Samples</a>
+            </li>
+            <li class="nav-item ">
+              <a href="#pricing" class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="#download" class="nav-link">Download</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">Find The Perfect Home To Call Yours.</h1>
+          <button class="btn btn-dark btn-lg download-button" type="button"> <i class="fa fa-apple"></i>
+            Download</button>
+          <button class="btn btn-outline-light btn-lg download-button" type="button"><i class="fab fa-google-play"></i>
+            Download</button>
+        </div>
+        <div class="col-lg-6">
+          <img class="title-image"
+            src="data:image/png;base64,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"
+            alt="iphone-mockup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- samples -->
+
+  <section id="samples">
+    <div class="container text-center">
+      <h1 class="text-dark p-5">Feed Your Eyes.</h1>
+
+    </div>
+    <div class="container">
+      <div class="team row ">
+        <!-- card 1 -->
+        <div class="col-lg-4 col-sm-12 text-center p-3">
+          <div class="card mr-2 d-inline-block shadow-lg">
+            <!-- add b-r and p later css -->
+            <div class="card-img-top">
+              <img src="./images/luxury building with pool..jpg" class="img-fluid p-2 " alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Luxury Building With Swimming Pool</h3>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia a, nesciunt architecto voluptates
+                ullam distinctio!
+
+              </p>
+              <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+              <p class="text-black-50">Lekki</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- carousel -->
+        <div class="col-lg-4 col-sm-12 p-3">
+          <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+            <div class="carousel-inner text-center">
+              <div class="carousel-item active">
+                <div class="card mr-2 d-inline-block shadow">
+                  <div class="card-img-top">
+                    <img src="./images/home-real-estate-106399.jpg" class="img-fluid p-2 " alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Simple Classy And Perfect.</h3>
+                    <p class="card-text">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia adipisci nesciunt delectus
+                      temporibus quis voluptate?
+                    </p>
+                    <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+                    <p class="text-black-50">Garki, Abuja</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- carousel card2 -->
+              <div class="carousel-item">
+                <div class="card  d-inline-block mr-2 shadow">
+                  <div class="card-img-top">
+                    <img src="./images/white-grey-and-red-wooden-house-164522.jpg" class="img-fluid  p-2 " alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Beatiful Building In A Peaceful Neighborhood.</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim delectus quam eligendi distinctio
+                      fugiat obcaecati.
+                    </p>
+                    <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+                    <p class="text-black-50">Maitama, Abuja</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- carousel card3 -->
+              <div class="carousel-item">
+                <div class="card  d-inline-block mr-2 shadow">
+                  <div class="card-img-top">
+                    <img src="./images/appliances-architecture-ceiling-chairs-534151.jpg" class="img-fluid p-2 h-300" alt="">
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Perfect Interior Decoration.</h3>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quis magni in, id eaque possimus!
+                    </p>
+                    <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+                    <p class="text-black-50">Everywhere</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="col-lg-4 col-sm-12 text-center p-3">
+          <div class="card mr-2 d-inline-block shadow-lg">
+            <div class="card-img-top">
+              <img src="./images/modern-building-against-sky-323780.jpg" class="img-fluid p-2 h-300" alt="">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Modern Building With Latest Facilities</h3>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quo voluptate sed provident quibusdam
+                dolor!
+              </p>
+              <a href="#" class="text-secondary text-decoration-none">Go somewhere</a>
+              <p class="text-black-50">Banana Island Lagos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+
+  <section id="features">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="feature-box col-sm-4">
+          <i class="fas fa-check-circle fa-4x icon"></i>
+          <h3 class="feature-title">Easy to use.</h3>
+          <p class="para">So easy to use, even your kid could do it.</p>
+        </div>
+
+        <div class="feature-box col-sm-4">
+          <i class="fas fa-bullseye fa-4x icon"></i>
+          <h3 class="feature-title">Elite Clientele</h3>
+          <p class="para">We have all type of houses, we work with your budget.</p>
+        </div>
+
+        <div class="feature-box col-sm-4">
+          <i class="fas fa-heart fa-4x icon"></i>
+          <h3 class="feature-title">Guaranteed to work.</h3>
+          <p class="para">Don't be homeless, get yourself a home today.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+
+    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner ">
+        <div class="carousel-item active container-fluid">
+          <h2>Looking for an aparment in lagos could be tedious, thanks to <b>YourHome</b> for making it easy.</h2>
+          <img class="testimonial-image" src="https://images.pexels.com/photos/3848184/pexels-photo-3848184.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="aishat-profile">
+          <em>Aishat, Oshodi-lagos</em>
+        </div>
+
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text"> I couldn't bear the stress of looking for houses for all my side chicks in
+            Nigeria. <br> Thank God for <b>YourHome</b> I can easily rent an apartment or even buy a building for my
+            babies all over the country. </h2>
+          <img class="testimonial-image" src="https://images.pexels.com/photos/825947/pexels-photo-825947.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="alh-profile">
+          <em>Anonymous, Ijebu-ode</em>
+        </div>
+
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">If you've not been scammed by agents in Nigeria all in the name of renting an
+            apartments or buying a landed property, You wouldn't appreciate what <b>YourHome</b> is doing in Nigeria.
+          </h2>
+          <img class="testimonial-image" src="https://images.pexels.com/photos/4674175/pexels-photo-4674175.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="jessy-profile">
+          <em>Jessica, Port-Harcourt</em>
+        </div>
+
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text"> Help me thank <b>YourHome</b> for helping me secure a comfortable apartment without having to leave my shop.</h2>
+          <img class="testimonial-image" src="https://images.pexels.com/photos/4693153/pexels-photo-4693153.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="ejike-profile">
+          <em>Ejike, Onitsha</em>
+        </div>
+
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text"> Thanks to  <b>YourHome</b> acquiring properties has never been easier.</h2>
+          <img class="testimonial-image" src="https://images.pexels.com/photos/1694881/pexels-photo-1694881.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="james-profile">
+          <em> James, Abuja</em>
+        </div>
+      </div>
+      <a href="#testimonial-carousel" class="carousel-control-prev" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a href="#testimonial-carousel" class="carousel-control-next" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+
+
+
+
+  </section>
+
+
+  <!-- Press -->
+
+  <section id="press">
+    <img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
+    <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section id="pricing">
+
+    <h2 class="price-text">A Plan for Every Ones's Housing Needs</h2>
+    <p>Simple and affordable price plans for your and your pocket.</p>
+
+    <div class="row">
+      <div class=" pricing-col col-lg-6 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Apartments</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">₦120,000 Upwards</h2>
+            <p>SIngle Rooms</p>
+            <p>A Room & Parlour</p>
+            <p>2,3,4 Bedroom Flats</p>
+            <p>Shared Apartments</p>
+            <button class="btn btn-lg btn-block btn-outline-dark " type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" pricing-col col-lg-6 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>BUildings</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">₦7,000,000 Upwards</h2>
+            <p>Bungalows/ Duplex For Sale</p>
+            <p>Bungalows/Duplex To Let</p>
+            <p>Hotel, Plazas and complex</p>
+            <p>Rnovation, furnishing and interior design </p>
+            <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-col col-lg-6 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Landed Properties</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">₦7,000,000 Upwards</h2>
+            <p>Empty plots Of Lands</p>
+            <p>Property & Land Survey</p>
+            <p>Plots Of land with uncompleted projects</p>
+            <p> Bulding, Development & Furnishing Of Houses </p>
+            <!-- <p>Unlimited App Usage</p> -->
+            <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class=" pricing-col col-lg-6 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Shops</h3>
+          </div>
+          <div class="card-body ">
+            <h2 class="price-text ">₦120,000 Upwards</h2>
+            <p>Small shops</p>
+            <p>Mall  Spaces</p>
+            <p>Ware  Houses</p>
+            <p>Office Spaces</p>
+            <button class="btn btn-lg btn-block btn-outline-dark " type="button">Sign Up</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+    <div class="container-fluid">
+      <h3 class="big-heading">Find The Perfect Home For You & Your Family Today.</h3>
+      <button class="btn btn-lg btn-light download-button" type="button"> <i class="fa fa-apple"></i>Download</button>
+      <button class="btn btn-lg btn-dark download-button" type="button"><i
+          class="fab fa-google-play"></i>Download</button>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+    <div class="container-fluid">
+      <i class=" social-icon fab fa-facebook-f"> </i>
+      <i class=" social-icon fab fa-twitter"> </i>
+      <i class=" social-icon fab fa-instagram"> </i>
+      <i class=" social-icon fas fa-envelope"> </i>
+      <p>© Copyright 2020 YourHome</p>
+      <p class="text-danger ">🐺code-wolf™</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
